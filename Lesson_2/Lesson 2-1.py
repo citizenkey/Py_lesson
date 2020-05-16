@@ -3,7 +3,6 @@
 # Элементы списка можно не запрашивать у пользователя, а указать явно, в программе.
 
 list_new = [2, 'text', 456, 45.3, None]
-print(type(list_new))
 for i in list_new:
     print(type(i))
 

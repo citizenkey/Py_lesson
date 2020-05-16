@@ -11,10 +11,7 @@ while True:
     print(f'осталось {i} раз')
     if i == 0: break
 print(result_list)
-print(len(result_list))
-for i in result_list:
-    new_list = []
-    if i % 2 == 0:
-        i -= 1
-        new_list.insert([i])
-        print(new_list)
+
+for i in range(1, len(result_list), 2):
+    result_list[i - 1], result_list[i] = result_list[i], result_list[i - 1]
+print(result_list)

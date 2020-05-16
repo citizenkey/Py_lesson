@@ -8,3 +8,15 @@
 # Пользователь ввел число 1. Результат: 7, 5, 3, 3, 2, 1.
 # Набор натуральных чисел можно задать непосредственно в коде,
 # например, my_list = [7, 5, 3, 3, 2].
+
+my_list = [7, 5, 3, 3, 2]
+item = input('введите новый элемент рейтинга:')
+for index, number in enumerate(my_list):
+    if int(item) < int(number):
+        continue
+    my_list.insert(index,item)
+    print(my_list)
+    break
+else:
+    my_list.append(int(item))
+    print(my_list)
