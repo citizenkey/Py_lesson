@@ -5,12 +5,20 @@
 # но каждое слово должно начинаться с заглавной буквы. Необходимо использовать написанную ранее
 # функцию int_func().
 def int_func(text):
-    q = text.title()
-    return q
+    return text.title()
 
-x = input('введи строку:')
-array = x.split()
+
+array = input('введи строку:').split()
 new_line = ''
 for a in array:
     new_line += int_func(a) + " "
 print(new_line)
+
+# def int_func(text):
+#     return text.title()
+#
+#
+# print(int_func('text'))
+#
+# res_int_func = int_func('text bla text')
+# print(res_int_func)

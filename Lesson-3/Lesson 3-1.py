@@ -6,10 +6,12 @@ def devide (num_1, num_2):
         c = num_1 / num_2
     except ZeroDivisionError:
         return ('Деление на ноль!')
+    except ValueError:
+        return ('Ошибка числа!')
     return(round(c,2))
 
-a = int(input('введи число 1: '))
-b = int(input('введи число 2: '))
+a = input('введи число 1: ')
+b = input('введи число 2: ')
 
 print(devide(a, b))
 
