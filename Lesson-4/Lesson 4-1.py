@@ -12,3 +12,5 @@ print("Имя скрипта: ", script_name)
 print("Параметр 1: ", first_param)
 print("Параметр 2: ", second_param)
 print("Параметр 3: ", third_param)
+
+def fin_res()
