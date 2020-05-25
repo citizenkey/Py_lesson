@@ -6,11 +6,12 @@
 Петров 13749.32
 '''
 with open('file_3.txt', 'r', encoding='utf-8') as file:
-    lines = file.readlines()
-    print(lines)
-    # for line in lines:
-        # result_list = line.split(' ')
-        # print(result_list)
-    for x in lines:
+    salary = 0
+    i = 0
+    for x in file:
         a = x.split(' ')
-        print(dict[a])
+        if int(a[1]) < 20000:
+            print(a[0])
+        salary += int(a[1])
+        i += 1
+    print(salary/i)

@@ -1,13 +1,13 @@
 # Пользователь вводит строку из нескольких слов, разделённых пробелами.
 # Вывести каждое слово с новой строки. Строки необходимо пронумеровать.
 # Если в слово длинное, выводить только первые 10 букв в слове.
-insert = str(input('Веедите несколько слов:'))
-num = 0
-for i in insert.split(" "):
-    num += 1
-    print(num, i[:10])
+# insert = str(input('Веедите несколько слов:'))
+# num = 0
+# for i in insert.split(" "):
+#     num += 1
+#     print(num, i[:10])
 
-# line = input()
-# words = line.split()
-# for i, word in enumerate(words):
-#     print(i, word[:10])
+line = input()
+words = line.split()
+for i, word in enumerate(words, 1):
+    print(i, word[:10])
