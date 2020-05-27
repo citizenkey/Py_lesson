@@ -4,13 +4,8 @@
 Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 '''
 
-from sys import argv
+import sys
 
-script_name, first_param, second_param, third_param = argv
-
-print("Имя скрипта: ", script_name)
-print("Параметр 1: ", first_param)
-print("Параметр 2: ", second_param)
-print("Параметр 3: ", third_param)
-
-def fin_res()
+hours, salary_per_our, bonus = map(float, sys.argv[1:])
+res = hours * salary_per_our + bonus
+print(f'Salary - {res}')
