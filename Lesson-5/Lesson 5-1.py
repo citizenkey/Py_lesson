@@ -5,7 +5,6 @@
 with open('file_1.txt', 'w') as file:
     while True:
         i = input('Введите значение: ')
-        if len(i) != 0:
-            file.write(i + '\n')
-        else:
+        if i == '':
             break
+        file.write(i + '\n')

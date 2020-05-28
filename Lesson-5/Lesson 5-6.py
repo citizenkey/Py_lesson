@@ -20,3 +20,13 @@ with open('file_6.txt', 'r', encoding='utf-8') as file:
                 summ += int(z[0])
         result[a[0]] = summ
     print(result)
+
+    # my_dict = dict()
+    # with open('6.txt') as f:
+    #     lines = f.readlines()
+    #     for line in lines:
+    #         splitted_line = line.split()
+    #         subject = splitted_line[0]
+    #         sum_lessons = sum([int(x[:x.find('(')]) for x in splitted_line[1:] if '(' in x])
+    #         my_dict[subject] = sum_lessons
+    # print(my_dict)

@@ -14,29 +14,49 @@
 Подсказка: использовать менеджер контекста.
 
 '''
+# import json
+# try:
+#     with open('file_7.txt') as file:
+#         list_result = []
+#         result = {}
+#         result_2 = {}
+#         average = 0
+#         i = 0
+#         for line in file:
+#             a = line.split()
+#             profit = int(a[2]) - int(a[3])
+#             if profit > 0:
+#                 average += profit
+#                 i += 1
+#             result[a[0]] = profit
+#         result_2['Averege_profit'] = round(average / i)
+#         list_result.append(result)
+#         list_result.append(result_2)
+#         print(list_result)
+#     with open("file_7.json", "w") as write_f:
+#         json.dump(list_result, write_f)
+#
+# except FileNotFoundError:
+#     print('Невозможно открыть фаил')
+
 import json
-try:
-    with open('file_7.txt') as file:
-        list_result = []
-        result = {}
-        result_2 = {}
-        average = 0
-        i = 0
-        for line in file:
-            a = line.split()
-            profit = int(a[2]) - int(a[3])
-            if profit > 0:
-                average += profit
-                i += 1
-            result[a[0]] = profit
-        result_2['Averege_profit'] = round(average / i)
-        list_result.append(result)
-        list_result.append(result_2)
-        print(list_result)
 
+firm_dict = {}
+average_profit = []
+with open('file_7.txt') as f:
+    lines = f.readlines()
+    for line in lines:
+        name, form, revenue, costs = line.split()
+        profit = int(revenue) - int(costs)
+        firm_dict[name] = profit
+        if profit > 0:
+            average_profit.append(profit)
 
-    with open("file_7.json", "w") as write_f:
-        json.dump(list_result, write_f)
+average_profit = sum(average_profit) / len(average_profit)
+out_info = [firm_dict, {'average_profit': average_profit}]
 
-except FileNotFoundError:
-    print('Невозможно открыть фаил')
+with open('file_7.json', 'w') as f_json:
+    json.dump(out_info, f_json)
+
+with open('file_7.json') as f_json:
+    print(json.load(f_json))
