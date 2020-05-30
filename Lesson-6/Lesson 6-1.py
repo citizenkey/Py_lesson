@@ -7,7 +7,18 @@
 '''
 
 
+from time import sleep
+from itertools import cycle
+
+
 class TrafficLight:
-    color = "Lexus"
+    def __init__(self):
+        self.__color = (('Красный', 5), ('Желтый', 2), ('Зеленый', 5))
+
     def running(self):
-        print(f'Запуск')
+        for color, sec in cycle(self.__color):
+            print(color, '(Ожидание {} sec)'.format(sec))
+            sleep(sec)
+
+traffic_light = TrafficLight()
+traffic_light.running()
