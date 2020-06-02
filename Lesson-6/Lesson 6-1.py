@@ -7,7 +7,14 @@
 '''
 
 
-class TrafficLight:
-    color = "Lexus"
+class TraficLight:
+    def __init__(self):
+        self.__color = (('red', 5), ('eylow', 2), ('green', 3))
+
     def running(self):
-        print(f'Запуск')
+        for color, sec in cycle(self.__color):
+            print(color, sec)
+            sleep(sec)
+
+t_lights = TraficLight()
+t_lights.running()
