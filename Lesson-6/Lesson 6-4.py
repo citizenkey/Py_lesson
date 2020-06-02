@@ -42,7 +42,7 @@ class WorkCar(Car):
     def show_speed(self):
         print('Скорость:', self.speed)
         if self.speed > 40:
-            return ('Превышаете скоростной режим!')
+            print ('Превышаете скоростной режим!')
 
 
 class PoliceCar(Car):
