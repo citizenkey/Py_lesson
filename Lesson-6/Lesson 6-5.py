@@ -13,20 +13,19 @@ class Stationery:
     def draw(self):
         print('Запуск отрисовки')
 
-
 class Pen(Stationery):
     def draw(self):
-        print('Ручка рисует')
+        print('Ручка пишет‚')
 
 
 class Pencil(Stationery):
     def draw(self):
-        print('Карандаш рисует')
-
+        print('Карандаш пишет‚')
 
 class Handle(Stationery):
     def draw(self):
-        print('Маркер рисует')
+
+        print('Маркер пишет‚')
 
 
 pen = Pen('ручка')

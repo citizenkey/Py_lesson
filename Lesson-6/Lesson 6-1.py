@@ -7,6 +7,7 @@
 '''
 
 
+
 from time import sleep
 from itertools import cycle
 
@@ -22,3 +23,4 @@ class TrafficLight:
 
 traffic_light = TrafficLight()
 traffic_light.running()
+

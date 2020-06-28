@@ -7,7 +7,7 @@
 Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите результат.
 Выполните вызов методов и также покажите результат.
 '''
-
+<
 class Car:
     def __init__(self, speed, color, name, is_police):
         self.speed = speed
@@ -16,13 +16,15 @@ class Car:
         self.is_police = is_police
 
     def go(self):
-        print(f'{self.name} поехала!')
+
+        print('{} едет!'.format(self.name))
 
     def stop(self):
-        print(f'{self.name} остановилась!')
+        print('{} останавливается!'.format(self.name))
 
     def turn(self, direction):
-        print(f'{self.name} повернула на {direction}!')
+        print('{} поворачивает на {}!'.format(self.name, direction))
+
 
     def show_speed(self):
         print('Скорость:', self.speed)
@@ -32,7 +34,9 @@ class TownCar(Car):
     def show_speed(self):
         super().show_speed()
         if self.speed > 60:
-            print('Привышение скорости!')
+
+            print('Превышаете скоростной режим!')
+
 
 
 class SportCar(Car):
@@ -43,20 +47,19 @@ class WorkCar(Car):
     def show_speed(self):
         print('Скорость:', self.speed)
         if self.speed > 40:
-            return ('Привышение скорости!')
 
+            print ('Превышаете скоростной режим!')
 
 class PoliceCar(Car):
     pass
 
-
-sport_car = SportCar(240, 'Красная', 'крутая спортивная тачка', False)
-town_car = TownCar(140, 'Черная', 'городской седан', False)
-work_car = WorkCar(90, 'Белая', 'мини-бус', False)
-police_car = PoliceCar(210, 'Полосаятая', 'полицейская', True)
+sport_car = SportCar(240, 'краная', 'крутая тачка', False)
+town_car = TownCar(140, 'серая', 'городская машина', False)
+work_car = WorkCar(90, 'белая', 'рабочая машина', False)
+police_car = PoliceCar(210, 'полосатая', 'полиуйская машина', True)
 
 sport_car.show_speed()
 town_car.show_speed()
-work_car.show_speed()
+work_car.show_speed() # не работает уведомление о скорости
 police_car.show_speed()
-sport_car.turn('право')
+sport_car.turn('left')

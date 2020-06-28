@@ -8,6 +8,9 @@ name, surname, position (должность), income (доход).
 Проверить работу примера на реальных данных
 (создать экземпляры класса Position, передать данные, проверить значения атрибутов, вызвать методы экземпляров)
 '''
+
+
+
 class Worker:
     def __init__(self, name, surname, position, income):
         self.name = name
@@ -21,6 +24,7 @@ class Position(Worker):
     def get_full_name(self):
         print(self.name, self.surname, self.position)
 
+<<<<<<< HEAD
     def get_total_income(self):
         print(self._income_wage + self._income_bonus)
 
